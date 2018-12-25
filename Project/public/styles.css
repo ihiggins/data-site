@@ -98,3 +98,37 @@ svg {
   left: 0;
   visibility: hidden;
 }
+
+
+
+
+
+/* ALERT */
+.alert{
+  visibility: hidden;
+  position: relative;
+  width:200px;
+  height:60px;
+  margin:auto;
+  top:20vh;
+}
+
+.triangle{
+  position:relative;
+  margin:auto;
+  width:10px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 10px solid white;
+}
+
+.box{
+  font-weight:bold;
+  text-align:center;
+  line-height:60px;
+  background:white;
+  position:relative;
+  height:100%;
+  border-radius:10px;
+
+}

@@ -38,10 +38,11 @@ io.on('connection' , function(socket){
 function getData(url , socket){
 request(url, function (error, response, body) {
   if(error) {
-      socket.emit('run', 'error');
+      socket.emit('runError', 'error');
       return console.log(error);
     }
   if (response.statusCode == 200){
+    socket.emit('run');
     fs.writeFile("./build/test.html", body, function(err) {
 
        var tag = getTags(socket);

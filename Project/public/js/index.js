@@ -13,9 +13,12 @@ $( ".submit" ).click(function() {
   socket.emit('makeRequest', $('.url').val());
 });
 
-socket.on('run' , function(data){
+socket.on('runError' , function(data){
   console.log(data);
-  alert('invalid url');
+  $('.alert').css('visibility','visible');
+});
+socket.on('run' , function(){
+  $('.alert').css('visibility','hidden');
 });
 
 socket.on('getTags' , function(items){
